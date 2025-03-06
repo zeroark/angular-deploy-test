@@ -37,6 +37,8 @@ jobs:
       uses: actions/upload-pages-artifact@v4
       with:
         path: './dist/angular17-demo'
+        name: 'angular17-demo-artifact'  # Optional: specify a name for the artifact
+        if-no-files-found: 'error'  # Optional: specify behavior if no files are found
 
   deploy:
     if: github.ref == 'refs/heads/main'
