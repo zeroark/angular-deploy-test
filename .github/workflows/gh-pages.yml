@@ -31,5 +31,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: 'github-pages'  # Ensure the artifact name matches
-        path: './dist/angular-github-actions'
+        path: 'dist/angular-github-actions'
         if-no-files-found: 'error'
