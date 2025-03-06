@@ -27,6 +27,8 @@ jobs:
         if: success()
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.DEPLOY_GHP_TEST }}
           publish_dir: dist/angular17-demo
           enable_jekyll: true
+          # Ensure the token has the correct permissions
+          # Ensure the publish_dir is correct
