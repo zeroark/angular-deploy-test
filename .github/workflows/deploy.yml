@@ -36,7 +36,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: 'angular17-demo-artifact'
+        name: 'github-pages'  # Ensure the artifact name matches
         path: './dist/angular17-demo'
         if-no-files-found: 'error'
 
@@ -60,11 +60,11 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: 'angular17-demo-artifact'
+          name: 'github-pages'  # Ensure the artifact name matches
           path: './dist/angular17-demo'
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
         with:
-          token: ${{ secrets.DEPLOY_GHP_TEST }}  # Use 'token' instead of 'github_token'
+          token: ${{ secrets.DEPLOY_GHP_TEST }}
