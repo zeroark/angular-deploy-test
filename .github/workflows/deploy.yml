@@ -67,4 +67,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
         with:
-          github_token: ${{ secrets.DEPLOY_GHP_TEST }}
+          token: ${{ secrets.DEPLOY_GHP_TEST }}  # Use 'token' instead of 'github_token'
